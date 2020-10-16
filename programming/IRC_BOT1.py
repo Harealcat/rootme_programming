@@ -52,7 +52,7 @@ def main():
         print(answer)
 
         #Send answer
-        irc.send(('!ep1 -rep '+str(answer)).encode())
+        irc.send(('PRIVMSG candy :!ep1 -rep '+str(answer)+'\r\n').encode())
 
         #Get password
         password = irc.recv(7000).decode('utf-8')
